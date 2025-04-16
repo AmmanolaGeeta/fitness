@@ -1,0 +1,78 @@
+.step-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .step-card {
+    background: var(--ion-card-background);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .step-count {
+    margin: 20px 0;
+  
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: bold;
+      color: var(--ion-color-primary);
+    }
+  
+    p {
+      margin: 0;
+      color: var(--ion-color-medium);
+    }
+  }
+  
+  .step-goal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  
+    p {
+      margin: 0;
+      color: var(--ion-color-medium);
+    }
+  }
+  
+  .chart-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+  }
+  
+  .chart-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--ion-color-primary);
+    }
+  
+    p {
+      margin: 0;
+      color: var(--ion-color-medium);
+      font-size: 0.8rem;
+    }
+  }
+  
+  .step-actions {
+    margin-top: 20px;
+  }
+  
+  ion-progress-bar {
+    margin: 20px 0;
+    height: 8px;
+    border-radius: 4px;
+  }

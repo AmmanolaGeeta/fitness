@@ -1,0 +1,55 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Water Tracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="water-container">
+    <div class="water-card">
+      <div class="water-count">
+        <h1>{{ waterIntake }}<span class="unit">ml</span></h1>
+        <p>water today</p>
+      </div>
+
+      <div class="water-goal">
+        <p>Goal: {{ waterGoal }}ml</p>
+        <ion-button fill="clear" (click)="setNewGoal()">
+          <ion-icon name="pencil" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="waterChart"></canvas>
+        <div class="chart-center-text">
+          <h2>{{ progress.toFixed(0) }}%</h2>
+          <p>of goal</p>
+        </div>
+      </div>
+
+      <ion-progress-bar [value]="progress / 100" color="primary"></ion-progress-bar>
+
+      <div class="quick-add-buttons">
+        <ion-button (click)="addWater(250)">250ml</ion-button>
+        <ion-button (click)="addWater(500)">500ml</ion-button>
+        <ion-button (click)="addWater(1000)">1L</ion-button>
+      </div>
+
+      <div class="custom-add">
+        <ion-item>
+          <ion-label position="floating">Custom Amount (ml)</ion-label>
+          <ion-input type="number" #customAmount></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="addWater(+customAmount.value); customAmount.value = ''">
+          Add Custom Amount
+        </ion-button>
+      </div>
+
+      <div class="water-actions">
+        <ion-button expand="block" color="danger" (click)="resetWater()">
+          Reset Water
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content> -->

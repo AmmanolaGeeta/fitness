@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Step Tracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="step-container">
+    <div class="step-card">
+      <div class="step-count">
+        <h1>{{ stepCount | number }}</h1>
+        <p>steps today</p>
+      </div>
+
+      <div class="step-goal">
+        <p>Goal: {{ stepGoal | number }} steps</p>
+        <ion-button fill="clear" (click)="setNewGoal()">
+          <ion-icon name="pencil" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="stepChart"></canvas>
+        <div class="chart-center-text">
+          <h2>{{ progress.toFixed(0) }}%</h2>
+          <p>of goal</p>
+        </div>
+      </div>
+
+      <ion-progress-bar [value]="progress / 100" color="success"></ion-progress-bar>
+
+      <div class="step-actions">
+        <ion-button expand="block" color="danger" (click)="resetSteps()">
+          Reset Steps
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

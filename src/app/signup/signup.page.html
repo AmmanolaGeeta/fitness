@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="signup-container">
+    <h1>Create Account</h1>
+    <p>Start your fitness journey today</p>
+
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" [disabled]="!signupForm.valid">
+        Sign Up
+      </ion-button>
+    </form>
+
+    <div class="login-link">
+      <p>Already have an account? <a (click)="navigateToLogin()">Log in</a></p>
+    </div>
+  </div>
+</ion-content>
